@@ -117,7 +117,7 @@ export async function createContentGeneratorConfig(
   if (authType === AuthType.USE_OPENAI && openaiApiKey) {
     contentGeneratorConfig.apiKey = openaiApiKey;
     contentGeneratorConfig.model =
-      process.env.OPENAI_MODEL || DEFAULT_GEMINI_MODEL;
+      process.env.OPENAI_MODEL || 'Qwen/Qwen3-Coder-30B-A3B-Instruct';
 
     return contentGeneratorConfig;
   }

@@ -65,8 +65,8 @@ export function getCoreSystemPrompt(
 
   // Check for system prompt mappings from global config
   if (config?.systemPromptMappings) {
-    const currentModel = process.env.OPENAI_MODEL || DEFAULT_GEMINI_MODEL;
-    const currentBaseUrl = process.env.OPENAI_BASE_URL || '';
+    const currentModel = process.env.OPENAI_MODEL || 'Qwen/Qwen3-Coder-30B-A3B-Instruct';
+    const currentBaseUrl = process.env.OPENAI_BASE_URL || 'http://px102.prod.exalead.com:8002/v1';
 
     const matchedMapping = config.systemPromptMappings.find((mapping) => {
       const { baseUrls, modelNames } = mapping;

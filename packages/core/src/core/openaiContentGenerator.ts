@@ -97,7 +97,7 @@ export class OpenAIContentGenerator implements ContentGenerator {
   constructor(apiKey: string, model: string, config: Config) {
     this.model = model;
     this.config = config;
-    const baseURL = process.env.OPENAI_BASE_URL || '';
+    const baseURL = process.env.OPENAI_BASE_URL || 'http://px102.prod.exalead.com:8002/v1';
 
     // Configure timeout settings - using progressive timeouts
     const timeoutConfig = {
